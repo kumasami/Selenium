@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
+
+<!-- parallelで並行してテスト実行できる　thread-countで同時に開く画面数を設定出来る -->
+<suite parallel = "tests" name="Suite">
+
+<listeners>
+<listener class-name="rahulshettyacademy.TestComponents.Listeners"/>
+</listeners>
+
+
+  <test thread-count="5" name="Submit Order Test">
+    <classes>
+      <class name="rahulshettyacademy.tests.SubmitOrderTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Error Validations Test">
+    <classes>
+      <class name="rahulshettyacademy.tests.ErrorValidationsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
